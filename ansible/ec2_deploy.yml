@@ -1,0 +1,18 @@
+- name: Deploy to EC2
+  hosts: localhost
+  connection: local
+  
+  tasks:
+    - name: Launch EC2 instance
+      ec2:
+        instance_type: t2.micro
+        image: ami-085925f297f89fce1
+        region: us-east-1
+        key_name: presentation
+        vpc_subnet_id: subnet-081eed6e
+        assign_public_ip: yes
+        wait: yes
+        count: 1
+        aws_access_key: "ASIA4X2L4Z36KJ6KA3YY"
+        aws_secret_key: "I7UpcbCzBKv4+Z2GeeDE4ke/9NyPXa4a2iKtUoRV"
+        security_token: "FwoGZXIvYXdzELb//////////wEaDIZkutVipXgwTtBRGSLGAf0LJgfpOVhYJm+AKd1SW1duUM84FC5FevrIAfIsZPw3E7koAF9tAztzCzEy8hWy/T8L1K1DEQ2b2sgiY0nUj4ipBlUMc+TgnMwWsSOZ4rvZ6U71YfpaIgjpOttlD/+uVBZd28lK+J1IKE8Z1HuqbPDhFYV5khgO/OJJtlL1Gf84T/P6QzSBFQAxX1llN1jyegP2aihDvzbmpbvYC6A16HS2zd0PnMnGyAiSQS4SPK7claDx3KtbjLaJjL36RUKXgAVw6hUliSj7hdf1BTItnt7it5xrddDZ6d05X8+ZWygYsupq+vpbdQIqnP5pcD51Yn7ToEWZXA/kMVcC"        
