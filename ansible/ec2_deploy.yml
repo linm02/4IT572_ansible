@@ -36,7 +36,7 @@
       apt:
         name: docker.io
         state: present
-        update_cash: yes
+        update_cache: yes
       become: yes
     - service:
         name: docker
